@@ -1,0 +1,148 @@
+.about {
+  margin-top: 48px;
+}
+.about-container {
+  @media only screen and (min-width: 768px) {
+    padding: 0 48px 0 48px;
+  }
+  @media only screen and (min-width: 1024px) {
+    padding: 0 156px 0 156px;
+  }
+  @media only screen and (min-width: 1440px) {
+    padding: 0;
+  }
+  .title-container {
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+
+    @media only screen and (min-width: 420px) {
+      gap: 20px;
+    }
+
+    @media only screen and (min-width: 768px) {
+      margin-bottom: 60px;
+    }
+    .title {
+      font-size: 26px;
+      line-height: 1.3;
+      font-weight: 700;
+
+      @media only screen and (min-width: 420px) {
+        font-size: 30px;
+      }
+
+      @media only screen and (min-width: 768px) {
+        font-size: 36px;
+        position: relative;
+
+        &:before {
+          content: "";
+          display: block;
+          width: 238px;
+          height: 2px;
+          background: linear-gradient(359deg, #efebe6, transparent);
+          right: 100%;
+          margin-right: 16px;
+          top: 50%;
+          position: absolute;
+        }
+
+        &:after {
+          content: "";
+          display: block;
+          width: 238px;
+          height: 2px;
+          background: linear-gradient(1deg, #efebe6, transparent);
+          left: 100%;
+          margin-left: 16px;
+          top: 50%;
+          position: absolute;
+        }
+      }
+
+      @media only screen and (min-width: 1024px) {
+        &:before {
+          width: 346px;
+        }
+        &:after {
+          width: 346px;
+        }
+      }
+      @media only screen and (min-width: 1440px) {
+        &:before {
+          width: 494px;
+        }
+        &:after {
+          width: 494px;
+        }
+      }
+    }
+    .subtitle {
+      font-size: 14px;
+      line-height: 1.4;
+      font-weight: 500;
+      text-align: center;
+
+      @media only screen and (min-width: 768px) {
+        font-size: 16px;
+      }
+    }
+  }
+  .about-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    position: relative;
+
+    @media only screen and (min-width: 420px) {
+      gap: 40px;
+    }
+
+    @media only screen and (min-width: 768px) {
+      gap: 55px;
+    }
+    @media only screen and (min-width: 1440px) {
+      // min-height: 1731px;
+      column-gap: 40px;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    .about-card {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      @media only screen and (min-width: 420px) {
+        gap: 30px;
+      }
+      @media only screen and (min-width: 768px) {
+        gap: 55px;
+      }
+
+      @media only screen and (min-width: 1440px) {
+        height: 557px;
+      }
+      .description {
+        display: flex;
+        justify-content: center;
+        font-size: 14px;
+        line-height: 1.6;
+        text-align: center;
+
+        @media only screen and (min-width: 768px) {
+          width: 565px;
+          text-align: center;
+          line-height: 1.5;
+          font-size: 16px;
+        }
+        @media only screen and (min-width: 1440px) {
+          text-align: start;
+        }
+      }
+    }
+  }
+}

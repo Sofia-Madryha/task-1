@@ -1,0 +1,76 @@
+$heroImg320: "/assets/images/hero/home-320.jpg";
+$heroImg640: "/assets/images/hero/home-640.jpg";
+$heroImg420: "/assets/images/hero/home-420.jpg";
+$heroImg840: "/assets/images/hero/home-840.jpg";
+$heroImg768: "/assets/images/hero/home-768.jpg";
+$heroImg1536: "/assets/images/hero/home-1536.jpg";
+$overlay: "/assets/images/hero/overlay-1077.png";
+
+.hero-container {
+  background-image: url("#{$heroImg320}");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: black;
+  min-height: 600px;
+  position: relative;
+  min-width: 320px;
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url("#{$heroImg640}");
+  }
+  &:after {
+    content: "Health, love, fulfillment of dreams!";
+    font-family: "Dancing Script";
+    font-size: 36px;
+    line-height: 1.2;
+    color: white;
+    position: absolute;
+    z-index: 2;
+    top: 15px;
+    left: 20px;
+    width: 300px;
+    rotate: 345deg;
+  }
+
+  @media only screen and (min-width: 420px) {
+    min-height: 700px;
+    background-image: $heroImg420;
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url("#{$heroImg840}");
+
+      &:after {
+        font-size: 40px;
+        width: 332px;
+      }
+    }
+  }
+  @media only screen and (min-width: 768px) {
+    min-height: 800px;
+    background-image: $heroImg768;
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url("#{$heroImg1536}");
+
+      &:after {
+        content: "";
+        position: absolute;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        rotate: none;
+        width: 100%;
+        min-height: 800px;
+        background-image: url("#{$overlay}");
+      }
+    }
+  }
+}

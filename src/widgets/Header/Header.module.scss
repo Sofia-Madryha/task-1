@@ -18,6 +18,8 @@
     .logo-icon {
       width: 101px;
       height: 40px;
+      stroke: #000;
+      overflow: visible;
 
       @media only screen and (min-width: 1024px) {
         width: 150px;

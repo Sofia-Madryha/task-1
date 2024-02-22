@@ -1,12 +1,13 @@
-import Header from "../widgets/Header"
-import Hero from "../widgets/Hero"
+import {Header, Hero, About} from "../widgets";
 
- const HomePage = () =>{
-return( <div className="container">
-    <Header></Header>
-    <Hero></Hero>
-</div>
-)
-}
+ const HomePage = () => {
+  return (
+    <div className="container">
+      <Header/>
+      <Hero/>
+      <About/>
+    </div>
+  );
+};
 
 export default HomePage;
