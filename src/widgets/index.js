@@ -1,3 +1,4 @@
-export { Header } from './Header/index';
-export { Hero} from './Hero/index';
-export { About } from './About/index';
+export { Header } from './Header';
+export { Hero} from './Hero';
+export { About } from './About';
+export {Order} from './Order'
