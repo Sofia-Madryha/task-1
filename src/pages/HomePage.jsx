@@ -2,7 +2,7 @@ import {Header, Hero, About} from "../widgets";
 
  const HomePage = () => {
   return (
-    <div className="container">
+    <div>
       <Header/>
       <Hero/>
       <About/>

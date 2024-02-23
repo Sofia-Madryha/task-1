@@ -6,45 +6,45 @@ import { ReactComponent as BurgerMenu } from "../../assets/icons/burger-menu.svg
 const Header = () => {
   return (
     <header className="header">
-      <div className="header-container">
-        <div className="logo">
-          <Logo className="logo-icon" />
+      <div className="header__container container">
+        <div className="header__logo">
+          <Logo className="header__logo-icon" />
         </div>
-        <div className="burger-menu">
+        <div className="header__burger-menu">
           <button className="burger-button" type="button">
             <BurgerMenu width="28" height="28" />
           </button>
         </div>
-        <nav className="navigation">
+        <nav className="header__navigation">
           <ul className="navigation-list">
-            <li className="navigation-item">
-              <NavLink className="navigation-link" href="#home">
+            <li className="navigation-list__item">
+              <NavLink className="navigation-list__link" href="#home">
                 HOME
               </NavLink>
             </li>
-            <li className="navigation-item">
-              <NavLink className="navigation-link" href="#">
+            <li className="navigation-list__item">
+              <NavLink className="navigation-list__link" href="#">
                 OFFERING
               </NavLink>
             </li>
-            <li className="navigation-item">
-              <NavLink className="navigation-link" href="#">
+            <li className="navigation-list__item">
+              <NavLink className="navigation-list__link" href="#">
                 EXPERIANCE
               </NavLink>
             </li>
-            <li className="navigation-item">
-              <NavLink className="navigation-link" href="#about">
+            <li className="navigation-list__item">
+              <NavLink className="navigation-list__link" href="#about">
                 ABOUT
               </NavLink>
             </li>
-            <li className="navigation-item">
-              <NavLink className="navigation-link" href="#contact">
+            <li className="navigation-list__item">
+              <NavLink className="navigation-list__link" href="#contact">
                 CONTACT
               </NavLink>
             </li>
           </ul>
         </nav>
-        <button className="button header-button" type="button">
+        <button className=" header__button button" type="button">
           Book
         </button>
       </div>

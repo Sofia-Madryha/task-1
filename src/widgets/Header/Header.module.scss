@@ -1,4 +1,4 @@
-.header-container {
+.header__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -13,9 +13,9 @@
     position: relative;
   }
 
-  .logo {
+  .header__logo {
     height: 100%;
-    .logo-icon {
+    .header__logo-icon {
       width: 101px;
       height: 40px;
       stroke: #000;
@@ -27,7 +27,22 @@
       }
     }
   }
-  .navigation {
+
+  .header__burger-menu {
+    overflow: visible;
+    margin-left: auto;
+    @media only screen and (min-width: 1024px) {
+      display: none;
+      position: relative;
+    }
+    .burger-button {
+      padding: 0;
+      background-color: transparent;
+      border-color: transparent;
+      cursor: pointer;
+    }
+  }
+  .header__navigation {
     display: none;
 
     @media only screen and (min-width: 1024px) {
@@ -43,10 +58,10 @@
       gap: 40px;
       font-size: 14px;
 
-      .navigation-item {
+      .navigation-list__item {
         position: relative;
 
-        .navigation-link {
+        .navigation-list__link {
           &:active,
           &:hover {
             &::after {
@@ -69,7 +84,7 @@
       }
     }
   }
-  .header-button {
+  .header__button {
     display: none;
     position: relative;
     font-size: 12px;
@@ -87,21 +102,6 @@
 
     @media only screen and (min-width: 1024px) {
       display: inline-block;
-    }
-  }
-
-  .burger-menu {
-    overflow: visible;
-    margin-left: auto;
-    @media only screen and (min-width: 1024px) {
-      display: none;
-      position: relative;
-    }
-    .burger-button {
-      padding: 0;
-      background-color: transparent;
-      border-color: transparent;
-      cursor: pointer;
     }
   }
 }
