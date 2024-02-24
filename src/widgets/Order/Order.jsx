@@ -1,17 +1,20 @@
 import { Form } from "../../components";
 
 const Order = () => {
-
   return (
-    <section className="form">
-      <div className="form__container container">
-        <div className="form__header">
-          <h1 className="form__title title">Inspire</h1>
-          <h2 className="form__subtitle subtitle">
-            Brief description if you want to know more about us
+    <section className="order section">
+      <div className="order__container container">
+        <div className="order__header section-header">
+          <h1 className="order__title title">Inspire</h1>
+          <h2 className="order__subtitle subtitle">
+            To maintain high quality standards, I am selective in the weddings I
+            shoot and only take on a small number each year.
+          </h2>
+          <h2 className="order__subtitle subtitle">
+            I look forward to connecting with you!{" "}
           </h2>
         </div>
-   <Form/>
+        <Form />
       </div>
     </section>
   );

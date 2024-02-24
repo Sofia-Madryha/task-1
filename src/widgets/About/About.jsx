@@ -29,9 +29,9 @@ import {
 
 const About = () => {
   return (
-    <section className="about">
+    <section className="about section">
       <div className="about__container container">
-        <div className="about__header">
+        <div className="about__header section-header">
           <h1 className="about__title title">About Us</h1>
           <h2 className="about__subtitle subtitle">
             Brief description if you want to know more about us
