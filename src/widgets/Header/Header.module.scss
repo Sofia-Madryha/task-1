@@ -84,24 +84,12 @@
       }
     }
   }
-  .header__button {
-    display: none;
-    position: relative;
-    font-size: 12px;
-    width: 100px;
-    height: 40px;
-    background-color: transparent;
-    border: 1px solid;
-    cursor: pointer;
-    font-family: "Cinzel", serif;
-    padding: 10px 33px;
-    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    &:hover {
-      border: 1px solid #000;
-    }
+  // .header__button {
+  //   display: none;
+  //   position: relative;
 
-    @media only screen and (min-width: 1024px) {
-      display: inline-block;
-    }
-  }
+  //   @media only screen and (min-width: 1024px) {
+  //     display: inline-block;
+  //   }
+  // }
 }

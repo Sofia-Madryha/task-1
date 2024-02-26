@@ -2,7 +2,7 @@ import { Form } from "../../components";
 
 const Order = () => {
   return (
-    <section className="order section">
+    <section className="order__section section">
       <div className="order__container container">
         <div className="order__header section-header">
           <h1 className="order__title title">Inspire</h1>
@@ -14,6 +14,7 @@ const Order = () => {
             I look forward to connecting with you!{" "}
           </h2>
         </div>
+
         <Form />
       </div>
     </section>

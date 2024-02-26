@@ -1,6 +1,10 @@
 import { useForm } from "react-hook-form";
-
+import DatePicker from "react-datepicker";
+import { useState } from "react";
+import 'react-datepicker/dist/react-datepicker.css';
+import { Button } from "../../ui";
 const Form = () => {
+  const [selectedDate, setSelectedDate] = useState(new Date());
   const {
     register,
     handleSubmit,
@@ -8,13 +12,15 @@ const Form = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    alert(JSON.stringify(data));
+    console.log(JSON.stringify(data));
   };
+  const today = new Date();
   return (
     <form className="form__container" onSubmit={handleSubmit(onSubmit)}>
       <div className="form__control">
         <label>First Name</label>
-        <input className="form__field"
+        <input
+          className="form__field"
           placeholder="John"
           {...register("firstName", {
             required: true,
@@ -34,7 +40,8 @@ const Form = () => {
       </div>
       <div className="form__control">
         <label>Last Name</label>
-        <input className="form__field"
+        <input
+          className="form__field"
           placeholder="Smith"
           {...register("lastName", {
             required: true,
@@ -54,7 +61,8 @@ const Form = () => {
       </div>
       <div className="form__control">
         <label>Phone</label>
-        <input className="form__field"
+        <input
+          className="form__field"
           type="tel"
           placeholder="+1 111-11-11"
           {...register("phone", {
@@ -69,7 +77,8 @@ const Form = () => {
       </div>
       <div className="form__control">
         <label>Email</label>
-        <input className="form__field"
+        <input
+          className="form__field"
           type="email"
           placeholder="info@inspire.com"
           {...register("email", { required: true, pattern: /^\S+@\S+$/i })}
@@ -80,8 +89,9 @@ const Form = () => {
         )}
       </div>
       <div className="form__control">
-      <label>Venue</label>
-        <input className="form__field"
+        <label>Venue</label>
+        <input
+          className="form__field"
           type="text"
           placeholder="123 Main Street, Los Angeles, CA 90001"
           {...register("field", {
@@ -92,16 +102,18 @@ const Form = () => {
       </div>
       <div className="form__control">
         <label>Event Date</label>
-        <input className="form__field"
-          type="date"
-          {...register("date", {
-            valueAsDate: true,
-          })}
+        <DatePicker
+          className="form__field date"
+          selected={selectedDate}
+          onChange={(date)=>{setSelectedDate(date)}}
+          dateFormat={"dd/MM/yyyy"}
+          minDate={today}
         />
       </div>{" "}
       <div className="form__control">
-      <label>Comment</label> 
-        <textarea className="form__field comment"
+        <label>Comment</label>
+        <textarea
+          className="form__field comment"
           type="text"
           placeholder="How can we help you?"
           {...register("field", {
@@ -110,7 +122,7 @@ const Form = () => {
           })}
         />
       </div>
-      <button type="submit">Book</button>
+      <Button className='form__button' type="submit">Book</Button>
     </form>
   );
 };

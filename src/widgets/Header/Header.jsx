@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom";
 import React from "react";
 import { ReactComponent as Logo } from "../../assets/icons/logo.svg";
 import { ReactComponent as BurgerMenu } from "../../assets/icons/burger-menu.svg";
+import { Button } from "../../ui";
 
 const Header = () => {
   return (
@@ -44,9 +45,9 @@ const Header = () => {
             </li>
           </ul>
         </nav>
-        <button className=" header__button button" type="button">
+        <Button className="header__button">
           Book
-        </button>
+        </Button>
       </div>
     </header>
   );
