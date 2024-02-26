@@ -1,13 +1,14 @@
-import {Header, Hero, About, Order} from "../widgets";
 
+import { Header, Hero, About, Order } from "../widgets";
 
- const HomePage = () => {
+const HomePage = () => {
+ 
   return (
     <div>
-      <Header/>
-      <Hero/>
-      <About/>
-      <Order/>
+      <Header />
+      <Hero />
+      <About />
+      <Order />
     </div>
   );
 };

@@ -1,9 +1,9 @@
 import classNames from "classnames";
 
-const Button = ({ children, className }) => {
+const Button = ({ children, className, onClick }) => {
     const buttonClasses = classNames('custom-button', className);
   return (
-    <button className={buttonClasses} type="button">
+    <button className={buttonClasses} onClick={onClick} type="button">
       {children}
     </button>
   );

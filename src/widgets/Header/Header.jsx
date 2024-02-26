@@ -1,10 +1,18 @@
 import { NavLink } from "react-router-dom";
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import { ReactComponent as Logo } from "../../assets/icons/logo.svg";
 import { ReactComponent as BurgerMenu } from "../../assets/icons/burger-menu.svg";
 import { Button } from "../../ui";
+import { ThemeContext } from "../../context/ThemeContext";
 
 const Header = () => {
+  const { darkTheme, toggleTheme } = useContext(ThemeContext);
+  useEffect(() => {
+    document.documentElement.setAttribute(
+      "data-theme",
+      darkTheme ? "dark" : "light"
+    );
+  }, [darkTheme]);
   return (
     <header className="header">
       <div className="header__container container">
@@ -45,9 +53,12 @@ const Header = () => {
             </li>
           </ul>
         </nav>
-        <Button className="header__button">
-          Book
-        </Button>
+        <Button className="header__button">Book</Button>
+
+        <label className="switch">
+          <input className="switch-input" type="checkbox" checked={darkTheme} onChange={toggleTheme} />
+          <span className="slider round"></span>
+        </label>
       </div>
     </header>
   );
