@@ -1,6 +1,8 @@
+@use '../../styles/colors' as *;
 .order__section {
   padding-top: 40px;
-  background-color: #efebe6;
+  background-color: #{$beige};
+  color: #{$black};
 }
 
 .order__container {

@@ -109,7 +109,7 @@ const Form = () => {
           dateFormat={"dd/MM/yyyy"}
           minDate={today}
         />
-      </div>{" "}
+      </div>
       <div className="form__control">
         <label>Comment</label>
         <textarea

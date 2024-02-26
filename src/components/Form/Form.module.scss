@@ -1,13 +1,16 @@
+@use "../../styles/colors" as *;
+
 .form__container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 20px;
   .form__control {
     display: flex;
     flex-direction: column;
     gap: 10px;
     .form__field {
-      width: 100%;
+      // width: 100%;
       height: 50px;
       border-color: transparent;
       &::placeholder {
@@ -24,11 +27,13 @@
         color: #4a4a4a;
         font-family: "Cinzel";
         line-height: 1.7;
+        width: 266px;
       }
     }
   }
-  .form__button{
+  .form__button {
     width: 274px;
-    border: 2px solid #ffff;
+    border: 2px solid #{$white};
+    color: #{$black};
   }
 }
